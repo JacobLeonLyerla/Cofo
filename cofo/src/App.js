@@ -5,12 +5,11 @@ function getData () {
   axios
   .get("https://restcountries-v1.p.rapidapi.com/all",{
     headers: {
-      "x-rapidapi-host": "estcountries-v1.p.rapidapi.com",
-      "x-rapidapi-key": "OIodsvqwbCmshvxVv1Z3Nte6EXDKp1nb8Y9jsnzDUsBqZBEX0s"
+      'X-RapidAPI-Key': "OIodsvqwbCmshvxVv1Z3Nte6EXDKp1nb8Y9jsnzDUsBqZBEX0s"
     }
   })
   .then(response =>{
-    console.log("did it")
+    console.log(response.data)
   })
   .catch(err => {
     console.log(err);
