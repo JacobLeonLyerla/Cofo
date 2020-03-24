@@ -7,13 +7,14 @@ function App() {
     <div>
       <CountryProvider>
         <CountryContext.Consumer>
+          {context=>(
           <button
-            onClick={() => console.log(process.env.REACT_APP_API_KEY)}
+            onClick={context.actions.getData}
             className="App"
           >
             fetch
           </button>
-          ;
+          )}
         </CountryContext.Consumer>
       </CountryProvider>
     </div>
