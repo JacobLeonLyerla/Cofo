@@ -14,7 +14,10 @@ class CountryProvider extends Component {
         }
       })
       .then(response => {
-        console.log(response.data);
+       for(const country of response.data){
+         console.log(country.name)
+       
+       }
       })
       .catch(err => {
         console.log(err);
