@@ -12,7 +12,7 @@ class CountryProvider extends Component {
         axios
         .get("https://restcountries-v1.p.rapidapi.com/all",{
           headers: {
-            'X-RapidAPI-Key': "OIodsvqwbCmshvxVv1Z3Nte6EXDKp1nb8Y9jsnzDUsBqZBEX0s"
+            'X-RapidAPI-Key': process.env.REACT_APP_API_KEY
           }
         })
         .then(response =>{
