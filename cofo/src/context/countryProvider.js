@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import axios from "axios";
 
-export const CountryContext = react.createContext({});
+export const CountryContext = React.createContext({});
 
 class CountryProvider extends Component {
   state = {};
