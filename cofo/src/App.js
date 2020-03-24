@@ -1,16 +1,16 @@
 import React from "react";
+import axios from "axios"
 import "./App.css";
 function getData () {
-  
-  fetch("https://webcamstravel.p.rapidapi.com/webcams/list/%7Bmodifier%7D?lang=en", {
-    "method": "GET",
-    "headers": {
+  axios
+  .get("https://webcamstravel.p.rapidapi.com/webcams/list/%7Bmodifier%7D?lang=en",{
+    headers: {
       "x-rapidapi-host": "webcamstravel.p.rapidapi.com",
       "x-rapidapi-key": "OIodsvqwbCmshvxVv1Z3Nte6EXDKp1nb8Y9jsnzDUsBqZBEX0s"
     }
   })
-  .then(response => {
-    console.log(response);
+  .then(response =>{
+    console.log(response)
   })
   .catch(err => {
     console.log(err);
