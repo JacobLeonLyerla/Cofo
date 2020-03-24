@@ -7,13 +7,10 @@ function App() {
     <div>
       <CountryProvider>
         <CountryContext.Consumer>
-          {context=>(
-          <button
-            onClick={context.actions.getData}
-            className="App"
-          >
-            fetch
-          </button>
+          {context => (
+            <button onClick={context.actions.getData} className="App">
+              fetch
+            </button>
           )}
         </CountryContext.Consumer>
       </CountryProvider>
