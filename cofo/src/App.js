@@ -8,7 +8,7 @@ function App() {
       <CountryProvider>
         <CountryContext.Consumer>
           {context => (
-            <button onClick={context.actions.getData} className="App">
+            <button onClick={()=>context.actions.getData('https://restcountries-v1.p.rapidapi.com/all')} className="App">
               fetch
             </button>
           )}
