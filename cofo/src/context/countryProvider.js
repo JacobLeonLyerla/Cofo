@@ -6,16 +6,16 @@ export const CountryContext = React.createContext({});
 
 class CountryProvider extends Component {
   state = {};
-  getData = () => {
+  getData = (url) => {
     axios
-      .get("https://restcountries-v1.p.rapidapi.com/all", {
+      .get(url, {
         headers: {
           "X-RapidAPI-Key": process.env.REACT_APP_API_KEY
         }
       })
       .then(response => {
        for(const country of response.data){
-         console.log(country.name)
+         console.log(country)
        
        }
       })
