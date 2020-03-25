@@ -5,7 +5,9 @@ import axios from "axios";
 export const CountryContext = React.createContext({});
 
 class CountryProvider extends Component {
-  state = {};
+  state = {
+    countries:[]
+  };
   getData = (url) => {
     axios
       .get(url, {
@@ -14,8 +16,9 @@ class CountryProvider extends Component {
         }
       })
       .then(response => {
+        const countries = []
        for(const country of response.data){
-         console.log(country)
+        countries.push(country)
        
        }
       })
@@ -24,9 +27,11 @@ class CountryProvider extends Component {
       });
   };
   render() {
+    const countryData = this.state
     return (
       <CountryContext.Provider
         value={{
+          countryData,
           actions: {
             getData: this.getData
           }
