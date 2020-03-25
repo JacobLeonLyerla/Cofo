@@ -1,7 +1,7 @@
 import React from 'react'
 
-function AllCountries(){
-
-    return <div>test</div>
+function AllCountries(props){
+console.log(props.context.countryData)
+    return <div></div>
 }
 export default AllCountries
