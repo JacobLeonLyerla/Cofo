@@ -21,6 +21,7 @@ class CountryProvider extends Component {
         countries.push(country)
        
        }
+       this.setState({countries});
       })
       .catch(err => {
         console.log(err);
