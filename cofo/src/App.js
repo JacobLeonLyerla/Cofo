@@ -1,6 +1,6 @@
 import React, {Fragment} from "react";
 import "./App.css";
-import { Route } from "react-router-dom";
+import { Route,Link } from "react-router-dom";
 
 import CountryProvider, { CountryContext } from "./context/countryProvider";
 
@@ -8,20 +8,21 @@ import AllCountries from "./components/allCountries"
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <CountryProvider>
         <CountryContext.Consumer>
           {context => (<Fragment>
-            <button
+            <Link
               onClick={() =>
                 context.actions.getData(
                   "https://restcountries-v1.p.rapidapi.com/all"
                 )
               }
-              className="App"
+              to="/all"
+             
             >
               fetch
-            </button>
+            </Link>
             <Route
             exact
             path="/all"
