@@ -4,6 +4,7 @@ import { Route, Link } from "react-router-dom";
 
 import CountryProvider, { CountryContext } from "./context/countryProvider";
 
+import SearchBar from "./components/searchBar";
 import AllCountries from "./components/allCountries";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <CountryContext.Consumer>
           {context => (
             <Fragment>
+              <SearchBar context={context} />
               <Link
                 onClick={() =>
                   context.actions.getData(
