@@ -1,5 +1,10 @@
 import React from "react";
 
+import {
+  Card, CardText, CardBody,
+  CardTitle, CardSubtitle, 
+} from 'reactstrap';
+
 function AllCountries(props) {
   function renderAll() {
     if (
@@ -10,8 +15,15 @@ function AllCountries(props) {
         "https://restcountries-v1.p.rapidapi.com/all"
       );
     }
+    console.log(props.context.countryData.countries)
     const countries = props.context.countryData.countries;
-    return countries.map(country => <div>{country.name}</div>);
+    return countries.map(country => <div>      <Card>
+      <CardBody>
+        <CardTitle>{country.name}</CardTitle>
+        <CardSubtitle>{country.region}</CardSubtitle>
+        <CardText>Population: {country.population}</CardText>
+      </CardBody>
+    </Card></div>);
   }
 
   return renderAll();
