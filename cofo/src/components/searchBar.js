@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 
 import { handleChange } from "../helpers/commonHelpers";
 
@@ -7,9 +7,14 @@ class SeachBar extends Component {
   render() {
     console.log(this.state);
     this.handleChange = handleChange.bind(this);
+   function countrySearch() {
+       console.log(this.state.search)
 
+    }
     return (
+        <form   onSubmit={()=>countrySearch()}>
       <input
+      
         type="search"
         name="search"
         id="search"
@@ -18,6 +23,9 @@ class SeachBar extends Component {
           this.handleChange(e);
         }}
       />
+                <button type="submit">Sign In</button>
+
+      </form>
     );
   }
 }
