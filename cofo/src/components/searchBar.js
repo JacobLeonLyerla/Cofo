@@ -1,25 +1,24 @@
-import React, {Component,Fragment } from "react";
+import React, { Component, Fragment } from "react";
 
-import { handleChange } from "../../helpers/commonHelpers";
+import { handleChange } from "../helpers/commonHelpers";
 
-class SeachBar extends Component{
-    state={search:''}
-    render(){
-        this.handleChange = handleChange.bind(this);
+class SeachBar extends Component {
+  state = { search: "" };
+  render() {
+    console.log(this.state);
+    this.handleChange = handleChange.bind(this);
 
-        return(
-    <input
-    type="search"
-    name="search"
-    id="search"
-    value ={this.state.search}
-    onChange={e =>{
-        this.handleChange(e)}}
-    
-    
-    />
-    )}
-
-
+    return (
+      <input
+        type="search"
+        name="search"
+        id="search"
+        value={this.state.search}
+        onChange={e => {
+          this.handleChange(e);
+        }}
+      />
+    );
+  }
 }
-export default SeachBar
+export default SeachBar;
