@@ -2,7 +2,7 @@ import React from "react";
 
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
-function AllCountries(props) {
+const AllCountries=(props)=> {
   function renderAll() {
     if (
       props.context.countryData.countries.length < 1 ||
