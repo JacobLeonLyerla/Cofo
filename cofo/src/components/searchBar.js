@@ -3,16 +3,18 @@ import { Input, Button } from "reactstrap";
 
 import { handleChange } from "../helpers/commonHelpers";
 
-// make it so it does not refreash everytime you search
 class SeachBar extends Component {
+   countrySearch = (e) => {
+  e.preventDefault();
+
+      console.log(this.state.search);
+    };
   state = { search: "" };
   render() {
     this.handleChange = handleChange.bind(this);
-    const countrySearch = () => {
-      console.log(this.state);
-    };
+    
     return (
-      <form onSubmit={countrySearch}>
+      <form onSubmit={this.countrySearch}>
         <Input
           type="search"
           name="search"
