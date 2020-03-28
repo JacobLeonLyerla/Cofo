@@ -4,15 +4,15 @@ import { Input, Button } from "reactstrap";
 import { handleChange } from "../helpers/commonHelpers";
 
 class SeachBar extends Component {
-   countrySearch = (e) => {
-  e.preventDefault();
+  countrySearch = e => {
+    e.preventDefault();
 
-      console.log(this.state.search);
-    };
+    console.log(this.state.search);
+  };
   state = { search: "" };
   render() {
     this.handleChange = handleChange.bind(this);
-    
+
     return (
       <form onSubmit={this.countrySearch}>
         <Input
