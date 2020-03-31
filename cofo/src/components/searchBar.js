@@ -7,7 +7,7 @@ class SeachBar extends Component {
   countrySearch = e => {
     e.preventDefault();
 
-    console.log(this.state.search);
+    console.log(`https://restcountries-v1.p.rapidapi.com/name/${this.state.search}`);
   };
   state = { search: "" };
   render() {
