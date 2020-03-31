@@ -28,6 +28,6 @@ const AllCountries=(props)=> {
     ));
   }
 
-  return <div className="card-container">{renderAll()}</div>;
+  return <div className="container"><div className="card-container">{renderAll()}</div></div> ;
 }
 export default AllCountries;
