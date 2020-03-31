@@ -40,6 +40,9 @@
     transform: rotate(360deg);
   }
 }
+.container{
+  width:100%
+}
 .card-container{
   width:50%;
   display:flex;
