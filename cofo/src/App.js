@@ -21,13 +21,13 @@ function App() {
                     "https://restcountries-v1.p.rapidapi.com/all"
                   )
                 }
-                to="/all"
+                to="/"
               >
                 fetch
               </Link>
               <Route
                 exact
-                path="/all"
+                path="/"
                 render={() => <AllCountries context={context} />}
               />
             </Fragment>
