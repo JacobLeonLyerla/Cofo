@@ -14,7 +14,7 @@ const AllCountries=(props)=> {
     }
     console.log(props.context.countryData.countries);
     const countries = props.context.countryData.countries;
-    return countries.map(country => (
+      return countries.map(country => (
       <div>
         {" "}
         <Card>
@@ -28,6 +28,6 @@ const AllCountries=(props)=> {
     ));
   }
 
-  return renderAll();
+  return <div className="card-container">{renderAll()}</div>;
 }
 export default AllCountries;
