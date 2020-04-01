@@ -40,15 +40,18 @@
   }
 }
 .container {
-  width: 100%;
-}
-.card-container {
-  width: 50%;
+  width: 100%; 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+.card-container {
+  width: 50%;
+ 
+  
+}
 .card {
-  width: 200px;
+  width: 50%;
   height: 200;
 }
+
