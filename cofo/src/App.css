@@ -54,6 +54,8 @@
   width:98%;
   height: 200;
   margin:5px;
+  border-color: white;
+  border-width: 1.3px;
 }
 .card-body{
   font-size:1.7rem;
