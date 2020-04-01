@@ -16,7 +16,7 @@ class SeachBar extends Component {
     this.handleChange = handleChange.bind(this);
 
     return (
-      <form onSubmit={this.countrySearch}>
+      <form className="search-form" onSubmit={this.countrySearch}>
         <Input
           type="search"
           name="search"
@@ -26,7 +26,7 @@ class SeachBar extends Component {
             this.handleChange(e);
           }}
         />
-        <Button type="submit">Sign In</Button>
+        <Button color="success" type="submit">search</Button>
       </form>
     );
   }
