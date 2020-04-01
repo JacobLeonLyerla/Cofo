@@ -39,6 +39,15 @@
     transform: rotate(360deg);
   }
 }
+.search-form{
+  display: flex;
+  justify-content: center;
+}
+.form-control{
+  width: 50vw;
+  height: 6vh;
+  justify-content: center;
+}
 .container {
   width: 100%; 
   display: flex;
