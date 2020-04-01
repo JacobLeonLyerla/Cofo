@@ -39,36 +39,33 @@
     transform: rotate(360deg);
   }
 }
-.search-form{
+.search-form {
   display: flex;
   justify-content: center;
 }
-.form-control{
+.form-control {
   width: 50vw;
   height: 6vh;
   justify-content: center;
 }
 .container {
-  width: 100%; 
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .card-container {
   width: 50%;
- 
-  
 }
 .card {
-  width:98%;
+  width: 98%;
   height: 200;
-  margin:5px;
-  border-color: black ;
-  background:rgba(86, 216, 209, 0.623);
+  margin: 5px;
+  border-color: black;
+  background: rgba(86, 216, 209, 0.623);
   border-width: 1.3px;
 }
-.card-body{
-  font-size:1.7rem;
-  width:100%;
- 
+.card-body {
+  font-size: 1.7rem;
+  width: 100%;
 }

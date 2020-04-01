@@ -26,7 +26,9 @@ class SeachBar extends Component {
             this.handleChange(e);
           }}
         />
-        <Button color="success" type="submit">search</Button>
+        <Button color="success" type="submit">
+          search
+        </Button>
       </form>
     );
   }

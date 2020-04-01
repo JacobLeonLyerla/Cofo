@@ -2,7 +2,7 @@ import React from "react";
 
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
-const AllCountries=(props)=> {
+const AllCountries = props => {
   function renderAll() {
     if (
       props.context.countryData.countries.length < 1 ||
@@ -14,7 +14,7 @@ const AllCountries=(props)=> {
     }
     console.log(props.context.countryData.countries);
     const countries = props.context.countryData.countries;
-      return countries.map(country => (
+    return countries.map(country => (
       <div className="card-container">
         {" "}
         <Card>
@@ -28,6 +28,6 @@ const AllCountries=(props)=> {
     ));
   }
 
-  return <div className="container">{renderAll()}</div> ;
-}
+  return <div className="container">{renderAll()}</div>;
+};
 export default AllCountries;
