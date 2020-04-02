@@ -5,8 +5,11 @@ import { faUserAlt } from '@fortawesome/free-solid-svg-icons'
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
 const AllCountries = props => {
-  const popCalulation=()=>{
-    
+  const popCalulation=(population)=>{
+    let pop = population /10000000
+
+    return 
+
   }
   const renderAll= () => {
     if (
@@ -22,13 +25,13 @@ const AllCountries = props => {
       <div className="card-container">
         {" "}
         <Card>
-        
+        <FontAwesomeIcon icon={faUserAlt} />
+
           <CardBody>
-          <FontAwesomeIcon icon={faUserAlt} />
 
             <CardTitle>{country.name}</CardTitle>
             <CardSubtitle>{country.region}</CardSubtitle>
-            <CardText>Population: {country.population}</CardText>
+            <CardText>Population: {popCalulation(country.population)}</CardText>
           </CardBody>
         </Card>
       </div>
