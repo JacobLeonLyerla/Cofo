@@ -1,5 +1,7 @@
 import React from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
 const AllCountries = props => {
@@ -18,7 +20,10 @@ const AllCountries = props => {
       <div className="card-container">
         {" "}
         <Card>
+        
           <CardBody>
+          <FontAwesomeIcon icon="coffee" />
+
             <CardTitle>{country.name}</CardTitle>
             <CardSubtitle>{country.region}</CardSubtitle>
             <CardText>Population: {country.population}</CardText>
