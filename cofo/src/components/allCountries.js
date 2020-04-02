@@ -33,6 +33,7 @@ const AllCountries = props => {
             <CardTitle>{country.name}</CardTitle>
             <CardSubtitle>{country.region}</CardSubtitle>
             <CardText>{popCalulation(country.population)}</CardText>
+            <CardText>{country.population > 1000000 ?`${(country.population /1000000).toFixed(1)} Milion`:`${country.population} Total`}</CardText>
           </CardBody>
         </Card>
       </div>
