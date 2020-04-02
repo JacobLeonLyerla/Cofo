@@ -1,24 +1,21 @@
 import React from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserAlt, faBaby } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUserAlt, faBaby } from "@fortawesome/free-solid-svg-icons";
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
 // DEV NOTE fix  it so there is a max height and handle the overflow
 const AllCountries = props => {
-  const popCalulation=(population)=>{
-    const pop = Math.round(population /10000000)
+  const popCalulation = population => {
+    const pop = Math.round(population / 10000000);
     let popIcons = [];
-    if(pop < 1) return<FontAwesomeIcon icon={faBaby} />
+    if (pop < 1) return <FontAwesomeIcon icon={faBaby} />;
     for (let i = 0; i < pop; i++) {
-     popIcons.push(<FontAwesomeIcon icon={faUserAlt} />)
-
+      popIcons.push(<FontAwesomeIcon icon={faUserAlt} />);
     }
-     return popIcons.map(icon => (
-      icon
-     ))
-  }
-  const renderAll= () => {
+    return popIcons.map(icon => icon);
+  };
+  const renderAll = () => {
     if (
       props.context.countryData.countries.length < 1 ||
       !props.context.countryData.countries
@@ -32,9 +29,7 @@ const AllCountries = props => {
       <div className="card-container">
         {" "}
         <Card>
-
           <CardBody>
-
             <CardTitle>{country.name}</CardTitle>
             <CardSubtitle>{country.region}</CardSubtitle>
             <CardText>{popCalulation(country.population)}</CardText>
@@ -42,7 +37,7 @@ const AllCountries = props => {
         </Card>
       </div>
     ));
-  }
+  };
 
   return <div className="container">{renderAll()}</div>;
 };
