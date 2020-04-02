@@ -22,7 +22,7 @@ const AllCountries = props => {
         <Card>
         
           <CardBody>
-          <FontAwesomeIcon icon="coffee" />
+          <FontAwesomeIcon icon={faCoffee} />
 
             <CardTitle>{country.name}</CardTitle>
             <CardSubtitle>{country.region}</CardSubtitle>
