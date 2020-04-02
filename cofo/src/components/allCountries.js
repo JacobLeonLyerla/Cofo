@@ -1,11 +1,14 @@
 import React from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faUserAlt } from '@fortawesome/free-solid-svg-icons'
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
 const AllCountries = props => {
-  function renderAll() {
+  const popCalulation=()=>{
+    
+  }
+  const renderAll= () => {
     if (
       props.context.countryData.countries.length < 1 ||
       !props.context.countryData.countries
@@ -14,7 +17,6 @@ const AllCountries = props => {
         "https://restcountries-v1.p.rapidapi.com/all"
       );
     }
-    console.log(props.context.countryData.countries);
     const countries = props.context.countryData.countries;
     return countries.map(country => (
       <div className="card-container">
@@ -22,7 +24,7 @@ const AllCountries = props => {
         <Card>
         
           <CardBody>
-          <FontAwesomeIcon icon={faCoffee} />
+          <FontAwesomeIcon icon={faUserAlt} />
 
             <CardTitle>{country.name}</CardTitle>
             <CardSubtitle>{country.region}</CardSubtitle>
