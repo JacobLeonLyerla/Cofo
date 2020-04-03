@@ -18,19 +18,16 @@ const SingleCountries = props => {
     return popIcons.map(icon => icon);
   };
   const renderSingle = () => {
-   {
+  console.log(props.match.params.country)
       props.context.actions.getData(
-        `https://restcountries-v1.p.rapidapi.com/name/${props.match.params}`
+        `https://restcountries-v1.p.rapidapi.com/name/${props.match.params.country}`
         );
-    }
+    
     const countries = props.context.countryData.countries;
     return countries.map(country => (
       <div className="card-container">
         {" "}
-        <Link className='link-styles'
-               country={country}
-                to={`/country/${country.name}`}
-              >
+    
         <Card>
           <CardBody>
             <CardTitle>{country.name}</CardTitle>
@@ -42,7 +39,6 @@ const SingleCountries = props => {
     
           </CardBody>
         </Card>
-        </Link>
       </div>
     ));
   };
