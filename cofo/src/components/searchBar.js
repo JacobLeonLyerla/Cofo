@@ -4,12 +4,13 @@ import { Input, Button } from "reactstrap";
 import { handleChange } from "../helpers/commonHelpers";
 
 class SeachBar extends Component {
-  countrySearch = e => {
+  countrySearch = (e) => {
     e.preventDefault();
 
     this.props.context.actions.getData(
       `https://restcountries-v1.p.rapidapi.com/name/${this.state.search}`
     );
+    this.setState({ search: "" });
   };
   state = { search: "" };
   render() {
@@ -22,7 +23,7 @@ class SeachBar extends Component {
           name="search"
           id="search"
           value={this.state.search}
-          onChange={e => {
+          onChange={(e) => {
             this.handleChange(e);
           }}
         />
