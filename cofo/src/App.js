@@ -31,9 +31,9 @@ function App() {
                 render={() => <AllCountries context={context} />}
               />
               <Route
-              exact
-              path="/country/:country"
-              render={()=><SingleCounty context={context}/>}
+                exact
+                path="/country/:country"
+                render={() => <SingleCounty context={context} />}
               />
             </Fragment>
           )}
