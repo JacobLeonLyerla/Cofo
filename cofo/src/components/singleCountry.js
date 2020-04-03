@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class SinglePictures extends Component {
+class SingleCountry extends Component {
   render(){
       return<div>test</div>
   }
