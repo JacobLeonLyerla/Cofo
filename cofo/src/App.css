@@ -39,12 +39,12 @@
     transform: rotate(360deg);
   }
 }
-.link-styles{
-  color:black;
+.link-styles {
+  color: black;
 }
-.link-styles:hover{
+.link-styles:hover {
   text-decoration: none;
-  color:black;
+  color: black;
 }
 .search-form {
   display: flex;
@@ -73,9 +73,8 @@
   background: rgba(86, 216, 209, 0.623);
   border-width: 1.3px;
 }
-.card:hover{
+.card:hover {
   background: rgba(86, 216, 209, 0.829);
-
 }
 .card-body {
   font-size: 1.7rem;
