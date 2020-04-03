@@ -29,7 +29,7 @@ const AllCountries = props => {
     return countries.map(country => (
       <div className="card-container">
         {" "}
-        <Link
+        <Link className='link-styles'
                country={country}
                 to={`/country/${country.name}`}
               >
