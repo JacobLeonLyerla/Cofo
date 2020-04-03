@@ -39,6 +39,9 @@
     transform: rotate(360deg);
   }
 }
+.link-styles{
+  color:black;
+}
 .search-form {
   display: flex;
   justify-content: center;
