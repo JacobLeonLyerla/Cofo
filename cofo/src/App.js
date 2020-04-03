@@ -32,7 +32,7 @@ function App() {
               />
               <Route
               exact
-              path="/country/:"
+              path="/country/:country"
               render={()=><SingleCounty context={context}/>}
               />
             </Fragment>
