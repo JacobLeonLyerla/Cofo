@@ -6,7 +6,7 @@ import CountryProvider, { CountryContext } from "./context/countryProvider";
 
 import SearchBar from "./components/searchBar";
 import AllCountries from "./components/allCountries";
-
+import SingleCounty from "./components/singleCounty";
 function App() {
   return (
     <div className="App">
