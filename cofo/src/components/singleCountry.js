@@ -17,14 +17,11 @@ const SingleCountries = props => {
     }
     return popIcons.map(icon => icon);
   };
-  const renderAll = () => {
-    if (
-      props.context.countryData.countries.length < 1 ||
-      !props.context.countryData.countries
-    ) {
+  const renderSingle = () => {
+   {
       props.context.actions.getData(
-        "https://restcountries-v1.p.rapidapi.com/all"
-      );
+        `https://restcountries-v1.p.rapidapi.com/name/${props.match.params}`
+        );
     }
     const countries = props.context.countryData.countries;
     return countries.map(country => (
@@ -50,6 +47,6 @@ const SingleCountries = props => {
     ));
   };
 
-  return <div className="container">{renderAll()}</div>;
+  return <div className="container">{renderSingle()}</div>;
 };
 export default SingleCountries;
