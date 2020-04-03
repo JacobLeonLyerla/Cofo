@@ -36,6 +36,7 @@ const SingleCountries = props => {
             </CardText>
             <CardText>
             {country.demonym}
+            {country.capital}
             </CardText>
     
           </CardBody>
