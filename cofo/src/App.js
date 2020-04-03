@@ -6,7 +6,7 @@ import CountryProvider, { CountryContext } from "./context/countryProvider";
 
 import SearchBar from "./components/searchBar";
 import AllCountries from "./components/allCountries";
-import SingleCounty from "./components/singleCounty";
+import SingleCounty from "./components/singleCountry";
 function App() {
   return (
     <div className="App">
@@ -29,6 +29,11 @@ function App() {
                 exact
                 path="/"
                 render={() => <AllCountries context={context} />}
+              />
+              <Route
+              exact
+              path="/country/:"
+              render={()=><SingleCounty context={context}/>}
               />
             </Fragment>
           )}
