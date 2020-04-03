@@ -34,6 +34,9 @@ const SingleCountries = props => {
                 ? `${(country.population / 1000000).toFixed(1)} Milion`
                 : `${country.population} Total`}
             </CardText>
+            <CardText>
+            {country.demonym}
+            </CardText>
     
           </CardBody>
         </Card>
