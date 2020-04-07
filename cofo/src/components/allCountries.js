@@ -1,7 +1,7 @@
 import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserAlt, faBaby } from "@fortawesome/free-solid-svg-icons";
+import { faUserAlt, faBaby,faPlus } from "@fortawesome/free-solid-svg-icons";
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import { Link } from "react-router-dom";
 
@@ -12,6 +12,9 @@ const AllCountries = props => {
     let popIcons = [];
     if (pop < 1) return <FontAwesomeIcon icon={faBaby} />;
     for (let i = 0; i < pop; i++) {
+      if(i ===8){
+          popIcons.push(<FontAwesomeIcon icon={faPlus} />)
+      }
       popIcons.push(<FontAwesomeIcon icon={faUserAlt} />);
     }
     return popIcons.map(icon => icon);
