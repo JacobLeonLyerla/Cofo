@@ -17,14 +17,11 @@ const AllCountries = props => {
     return popIcons.map(icon => icon);
   };
   const renderAll = () => {
-    if (
-      props.context.countryData.countries.length < 1 ||
-      !props.context.countryData.countries
-    ) {
+ 
       props.context.actions.getData(
         "https://restcountries-v1.p.rapidapi.com/all"
       );
-    }
+    
     const countries = props.context.countryData.countries;
     return countries.map(country => (
       <div className="card-container">
