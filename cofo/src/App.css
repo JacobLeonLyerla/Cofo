@@ -67,7 +67,7 @@
 
 .card {
   width: 98%;
-  height: 200;
+  min-height: 200px;
   margin: 5px;
   border-color: black;
   background: rgba(86, 216, 209, 0.623);
