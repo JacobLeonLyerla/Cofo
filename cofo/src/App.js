@@ -12,16 +12,10 @@ function App() {
     <div className="App">
       <CountryProvider>
         <CountryContext.Consumer>
-          {context => (
+          {(context) => (
             <Fragment>
               <SearchBar context={context} />
-              <Link
-       
-                
-                to="/all"
-              >
-                fetch
-              </Link>
+              <Link to="/all">fetch</Link>
               <Route
                 exact
                 path="/all"
@@ -30,7 +24,9 @@ function App() {
               <Route
                 exact
                 path="/country/:country"
-                render={props => <SingleCounty  context={context} {...props} />}
+                render={(props) => (
+                  <SingleCounty context={context} {...props} />
+                )}
               />
             </Fragment>
           )}
