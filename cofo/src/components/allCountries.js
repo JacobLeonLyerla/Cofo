@@ -14,7 +14,8 @@ const AllCountries = props => {
     for (let i = 0; i < pop; i++) {
       if(i ===8){
           popIcons.push(<FontAwesomeIcon icon={faPlus} />)
-      }
+          break;
+        }
       popIcons.push(<FontAwesomeIcon icon={faUserAlt} />);
     }
     return popIcons.map(icon => icon);
