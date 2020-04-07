@@ -16,11 +16,8 @@ function App() {
             <Fragment>
               <SearchBar context={context} />
               <Link
-                onClick={() =>
-                  context.actions.getData(
-                    "https://restcountries-v1.p.rapidapi.com/all"
-                  )
-                }
+       
+                
                 to="/all"
               >
                 fetch
