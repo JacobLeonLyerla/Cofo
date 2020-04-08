@@ -39,7 +39,7 @@ const SingleCountries = (props) => {
             <CardText>{country.demonym}</CardText>
             <CardText>{country.capital}</CardText>
           </CardBody>
-          <Link to="/all"><Button color='primary'>Home</Button></Link>
+          <Link to="/all" onClick={()=>props.context.clearCoutnries()}><Button color='primary'>Home</Button></Link>
         </Card>
       </div>
     ));
