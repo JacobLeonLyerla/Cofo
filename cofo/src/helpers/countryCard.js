@@ -1,12 +1,13 @@
 import React from "react"
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const CountryCard = props =>{
   console.log(props)
 return(
     <Link className='link-styles'
-               country={country}
-                to={`/country/${country.name}`}
+               country={props.country}
+                to={`/country/${props.country.name}`}
               >
         <Card>
           {/* <CardBody>
