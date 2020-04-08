@@ -1,14 +1,15 @@
-import react from "React"
+import React from "react"
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 
-const CountryCard = Props =>{
+const CountryCard = props =>{
+  console.log(props)
 return(
     <Link className='link-styles'
                country={country}
                 to={`/country/${country.name}`}
               >
         <Card>
-          <CardBody>
+          {/* <CardBody>
             <CardTitle>{country.name}</CardTitle>
             <CardSubtitle>{country.region}</CardSubtitle>
             <CardText>{popCalulation(country.population)} {country.population > 1000000
@@ -16,9 +17,9 @@ return(
                 : `${country.population} Total`}
             </CardText>
     
-          </CardBody>
+          </CardBody> */}
         </Card>
         </Link>
 )
 }
-default export CountryCard
+export default CountryCard
