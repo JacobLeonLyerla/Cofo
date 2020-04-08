@@ -8,6 +8,9 @@ class CountryProvider extends Component {
   state = {
     countries: []
   };
+  clearCoutnries =()=>{
+    this.setState({countries:[]})
+  }
   getData = url => {
     axios
       .get(url, {
@@ -33,7 +36,8 @@ class CountryProvider extends Component {
         value={{
           countryData,
           actions: {
-            getData: this.getData
+            getData: this.getData,
+            clearCoutnries:this.clearCoutnries
           }
         }}
       >
