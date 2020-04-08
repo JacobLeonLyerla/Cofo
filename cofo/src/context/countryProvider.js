@@ -6,26 +6,26 @@ export const CountryContext = React.createContext({});
 
 class CountryProvider extends Component {
   state = {
-    countries: []
+    countries: [],
   };
-  clearCoutnries =()=>{
-    this.setState({countries:[]})
-  }
-  getData = url => {
+  clearCoutnries = () => {
+    this.setState({ countries: [] });
+  };
+  getData = (url) => {
     axios
       .get(url, {
         headers: {
-          "X-RapidAPI-Key": process.env.REACT_APP_API_KEY
-        }
+          "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
+        },
       })
-      .then(response => {
+      .then((response) => {
         const countries = [];
         for (const country of response.data) {
           countries.push(country);
         }
         this.setState({ countries });
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   };
@@ -37,8 +37,8 @@ class CountryProvider extends Component {
           countryData,
           actions: {
             getData: this.getData,
-            clearCoutnries:this.clearCoutnries
-          }
+            clearCoutnries: this.clearCoutnries,
+          },
         }}
       >
         {this.props.children}{" "}
