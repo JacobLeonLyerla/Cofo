@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserAlt, faBaby,faPlus } from "@fortawesome/free-solid-svg-icons";
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import { Link } from "react-router-dom";
-
+import CountryCard from "../helpers/countryCard"
 // DEV NOTE fix  it so there is a max height and handle the overflow
 const AllCountries = props => {
   const popCalulation = population => {
@@ -30,22 +30,7 @@ const AllCountries = props => {
     return countries.map(country => (
       <div className="card-container">
         {" "}
-        <Link className='link-styles'
-               country={country}
-                to={`/country/${country.name}`}
-              >
-        <Card>
-          <CardBody>
-            <CardTitle>{country.name}</CardTitle>
-            <CardSubtitle>{country.region}</CardSubtitle>
-            <CardText>{popCalulation(country.population)} {country.population > 1000000
-                ? `${(country.population / 1000000).toFixed(1)} Milion`
-                : `${country.population} Total`}
-            </CardText>
-    
-          </CardBody>
-        </Card>
-        </Link>
+        <CountryCard country={country}/>
       </div>
     ));
   };
