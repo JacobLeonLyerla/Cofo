@@ -7,7 +7,7 @@ import CountryCard from "../helpers/countryCard";
 // DEV NOTE fix  it so there is a max height and handle the overflow
 const AllCountries = (props) => {
   const renderAll = () => {
-    if(props.context.countryData.countries.length <0){
+    if(props.context.countryData.countries.length === 0){
     props.context.actions.getData(
       "https://restcountries-v1.p.rapidapi.com/all"
     );
@@ -18,8 +18,8 @@ const AllCountries = (props) => {
         {" "}
         <Link
       className="link-styles"
-      country={props.country}
-      to={`/country/${props.country.name}`}
+      country={country}
+      to={`/country/${country.name}`}
     >
       <Card>
         <CountryCard country={country} />
