@@ -5,6 +5,8 @@ import { faUserAlt, faBaby } from "@fortawesome/free-solid-svg-icons";
 import {Button,Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import { Link } from "react-router-dom";
 
+import CountryCard from "../helpers/countryCard";
+
 // DEV NOTE fix  it so there is a max height and handle the overflow
 const SingleCountries = (props) => {
   // I am using this two places make this into helper
@@ -28,14 +30,7 @@ const SingleCountries = (props) => {
         {" "}
         <Card>
           <CardBody>
-            <CardTitle>{country.name}</CardTitle>
-            <CardSubtitle>{country.region}</CardSubtitle>
-            <CardText>
-              {popCalulation(country.population)}{" "}
-              {country.population > 1000000
-                ? `${(country.population / 1000000).toFixed(1)} Milion`
-                : `${country.population} Total`}
-            </CardText>
+          <CountryCard country={country} />
             <CardText>{country.demonym}</CardText>
             <CardText>{country.capital}</CardText>
           </CardBody>
