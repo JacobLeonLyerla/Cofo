@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import { Card } from "reactstrap";
+import { Card,CardBody } from "reactstrap";
 
 import CountryCard from "../helpers/countryCard";
 // DEV NOTE fix  it so there is a max height and handle the overflow
@@ -22,7 +22,9 @@ const AllCountries = (props) => {
       to={`/country/${country.name}`}
     >
       <Card>
+        <CardBody>
         <CountryCard country={country} />
+        </CardBody>
         </Card>
         </Link>
       </div>
