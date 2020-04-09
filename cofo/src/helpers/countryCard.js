@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
+import { CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserAlt, faBaby, faPlus } from "@fortawesome/free-solid-svg-icons";
 const CountryCard = (props) => {
@@ -17,17 +17,16 @@ const CountryCard = (props) => {
     return popIcons.map((icon) => icon);
   };
   return (
-
-        <CardBody>
-          <CardTitle>{props.country.name}</CardTitle>
-          <CardSubtitle>{props.country.region}</CardSubtitle>
-          <CardText>
-            {popCalulation(props.country.population)}{" "}
-            {props.country.population > 1000000
-              ? `${(props.country.population / 1000000).toFixed(1)} Milion`
-              : `${props.country.population} Total`}
-          </CardText>
-        </CardBody>
+    <CardBody>
+      <CardTitle>{props.country.name}</CardTitle>
+      <CardSubtitle>{props.country.region}</CardSubtitle>
+      <CardText>
+        {popCalulation(props.country.population)}{" "}
+        {props.country.population > 1000000
+          ? `${(props.country.population / 1000000).toFixed(1)} Milion`
+          : `${props.country.population} Total`}
+      </CardText>
+    </CardBody>
   );
 };
 export default CountryCard;
