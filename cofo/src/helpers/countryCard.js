@@ -1,4 +1,4 @@
-import React from "react";
+import React,{Fragment} from "react";
 import { CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserAlt, faBaby, faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -16,8 +16,8 @@ const CountryCard = (props) => {
     }
     return popIcons.map((icon) => icon);
   };
-  return (
-    <CardBody>
+  return (<Fragment>
+ 
       <CardTitle>{props.country.name}</CardTitle>
       <CardSubtitle>{props.country.region}</CardSubtitle>
       <CardText>
@@ -26,7 +26,7 @@ const CountryCard = (props) => {
           ? `${(props.country.population / 1000000).toFixed(1)} Milion`
           : `${props.country.population} Total`}
       </CardText>
-    </CardBody>
-  );
+   
+  </Fragment>);
 };
 export default CountryCard;
