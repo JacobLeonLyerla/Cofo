@@ -2,7 +2,14 @@ import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserAlt, faBaby } from "@fortawesome/free-solid-svg-icons";
-import {Button,Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
+import {
+  Button,
+  Card,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+} from "reactstrap";
 import { Link } from "react-router-dom";
 
 import CountryCard from "../helpers/countryCard";
@@ -30,11 +37,16 @@ const SingleCountries = (props) => {
         {" "}
         <Card>
           <CardBody>
-          <CountryCard country={country} />
+            <CountryCard country={country} />
             <CardText>{country.demonym}</CardText>
             <CardText>{country.capital}</CardText>
           </CardBody>
-          <Link to="/all" onClick={()=>props.context.actions.clearCountries()}><Button color='primary'>Home</Button></Link>
+          <Link
+            to="/all"
+            onClick={() => props.context.actions.clearCountries()}
+          >
+            <Button color="primary">Home</Button>
+          </Link>
         </Card>
       </div>
     ));
