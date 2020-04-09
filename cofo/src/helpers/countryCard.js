@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from "reactstrap";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserAlt, faBaby, faPlus } from "@fortawesome/free-solid-svg-icons";
 const CountryCard = (props) => {
@@ -18,12 +17,7 @@ const CountryCard = (props) => {
     return popIcons.map((icon) => icon);
   };
   return (
-    <Link
-      className="link-styles"
-      country={props.country}
-      to={`/country/${props.country.name}`}
-    >
-      <Card>
+
         <CardBody>
           <CardTitle>{props.country.name}</CardTitle>
           <CardSubtitle>{props.country.region}</CardSubtitle>
@@ -34,8 +28,6 @@ const CountryCard = (props) => {
               : `${props.country.population} Total`}
           </CardText>
         </CardBody>
-      </Card>
-    </Link>
   );
 };
 export default CountryCard;
