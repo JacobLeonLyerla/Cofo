@@ -8,7 +8,7 @@ class CountryProvider extends Component {
   state = {
     countries: [],
   };
-  clearCoutnries = () => {
+  clearCountries = () => {
     this.setState({ countries: [] });
   };
   getData = (url) => {
@@ -37,7 +37,7 @@ class CountryProvider extends Component {
           countryData,
           actions: {
             getData: this.getData,
-            clearCoutnries: this.clearCoutnries,
+            clearCountries: this.clearCountries,
           },
         }}
       >
