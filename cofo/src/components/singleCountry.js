@@ -7,8 +7,6 @@ import {
   Card,
   CardText,
   CardBody,
-  CardTitle,
-  CardSubtitle,
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
