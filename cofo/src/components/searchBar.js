@@ -28,7 +28,7 @@ class SeachBar extends Component {
           }}
         />
         <Button color="success" type="submit">
-          search
+          Search
         </Button>
       </form>
     );
