@@ -2,12 +2,7 @@ import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserAlt, faBaby } from "@fortawesome/free-solid-svg-icons";
-import {
-  Button,
-  Card,
-  CardText,
-  CardBody,
-} from "reactstrap";
+import { Button, Card, CardText, CardBody } from "reactstrap";
 import { Link } from "react-router-dom";
 
 import CountryCard from "../helpers/countryCard";
